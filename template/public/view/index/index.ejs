@@ -13,7 +13,7 @@
     <meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1" />
     <link rel="shortcut icon" href="//static.tcy365.com/uc/common/images/favicon.ico" />
     <!-- start 不要修改 -->
-    <% if(htmlWebpackPlugin.options.currenv == "production") { %>
+    <% if(process.env.NODE_ENV !== "development") { %>
     <meta name="AppPublic" content="<ctAppPublic>">
     <script>
         window.CTPrefConfig = {
@@ -22,7 +22,7 @@
         }
     </script>
     <% } %>
-    <link rel="stylesheet" href="//static.tcy365.com/cdn/element-ui/2.7.2/theme-chalk/index5.css">
+    <link rel="stylesheet" href="//static.tcy365.com/cdn/element-ui/2.7.2/theme-chalk/index5.css?t=1122">
     <% for (var css in htmlWebpackPlugin.files.css) { %>
     <link href="<%=htmlWebpackPlugin.files.css[css] %>" rel="stylesheet" />
     <% } %>
@@ -31,7 +31,7 @@
     <!-- end 不要修改 -->
 </head>
 
-<body>t12222
+<body>
     <div id="app"></div>
     <!-- start 不要修改 -->
     <script src="//static.tcy365.com/cdn/babel-polyfill/7.2.5/polyfill.min.js"></script>
